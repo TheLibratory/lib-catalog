@@ -1,0 +1,122 @@
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<div>
+<div class="folderWrapper"><!-- "folder" interface wrapper div-->
+	<div class="mainSpacer"><!--wrapper div that contains the selection tabs-->
+	</div><!--close selection tab wrapper tabe-->
+	<div class="mainSpacer"><!-- main content wrapper div -->
+		<div class="mainActiveContent">
+<table class="textFix" cellpadding="10px"><tr><td>
+<p><strong>Why log in?</strong></p>
+  
+  <ul>
+  <li> Access your library account (renew your books, saved records and searches, reading history, and more) [<a href="/screens/help_index.html#account">Help</a>]  </li>
+  <li> Have an eligible item retrieved and held for you at the library where you prefer to pick it up [<a href="/screens/help_index.html#retrieval">Help</a>]  </li>
+  <li> Request an item checked out to someone else, or listed as &quot;under consideration&quot;, &quot;ordered&quot;, or &quot;in process&quot; [<a href="/screens/help_index.html#holds">Help</a>]  </li>
+</ul>
+
+<p><a href="https://lib-pclcz020.austin.utexas.edu/illiad/IXA/illiad.dll/OpenURL?genre=article"><img border ="0" src="https://www.lib.utexas.edu/images/get-a-scan.png" alt="Get a Scan"></a></p>
+
+  <ul>
+  <li> Need an article or chapter from a journal or book owned by The UT Libraries? We will scan it so you can pick it up online. <br />  [<a href="http://www.lib.utexas.edu/services/ils/getascan.html">Help</a>].</li>
+  </ul>
+
+</td>
+<td valign="top">
+<form name="patform" method="POST" class="unpadded">
+<!--{iferrmsg}-->
+<br />
+<span class="errormessage">
+<!--{iferrmsgisPIN}-->
+<!--{newpinmsg}-->
+<!--{else}-->
+<!--{errmsg}-->
+<!--{xif}-->
+<br /><br />
+</span>
+<!--{xif}-->
+<!--{ifneedpatronverify}-->
+<!--{ifextpat}-->
+<table border="0" width="80%" class="loginarea textFix">
+<tr>
+<td valign="top">
+<div id="extpat">
+<p><strong>Login:</strong></p>
+<label for="extpatid">Your UT EID</label>:&nbsp; &nbsp;
+<!--{extpatid}-->
+<br />
+<label for="extpatpw">Password</label>:&nbsp; &nbsp;
+<!--{extpatpw}-->
+</div>
+</td>
+<!--{xif}-->
+<!--{xif}-->
+<td valign="top">
+<!-- <div id="libpat">
+<strong>or login with library identification:</strong><br />
+<!--{ifneedpatronname}-->
+<!--{nameprompt}-->
+&nbsp; &nbsp;
+<!--{name}-->
+<br />
+<!--{xif}-->
+<!--{ifneedpatronverify}-->
+<!--{barcodeprompt}-->
+&nbsp; &nbsp;
+<!--{barcode}-->
+<br />
+<!--{ifneedspin}-->
+<!--{iferrmsgisPIN}-->
+<!--{newpinmsg}-->
+<br />
+<!--{pin1prompt}-->
+&nbsp; &nbsp;
+<!--{pin1}-->
+<br />
+<!--{pin2prompt}-->
+&nbsp; &nbsp;
+<!--{pin2}-->
+<!--{else}-->
+<!--{pinprompt}-->
+&nbsp; &nbsp;
+<!--{pin}-->
+<br />
+<!--{xif}-->
+<!--{xif}-->
+<!--{xif}-->
+</div> -->
+</td>
+</tr>
+</table>
+
+<br />
+<div class="formButtonArea">
+<!--{ifneedspin}-->
+<!--{pinresetrequest}-->
+<!--{xif}-->
+<!--{submit}-->
+<input type="submit" class="submitHidden">
+</div>
+</fieldset>
+<!--{formend}-->
+
+</div>
+
+</td>
+</tr></table>
+
+
+		</div>
+	</div><!--close main content wrapper div-->
+</div><!--close wrapper of "folder interface"-->
+
+</div>
+<div style="clear:both"></div>
+
+</div><!-- pageContentInner -->
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].elements[0].focus(); }
+catch(err) {}
+//--><!]]></script>

@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- 2006 WebPAC Pro Version, set from 22 August, 2006 -->
+<!-- This file last changed: 17 August, 2006 -->
+<head>
+<title>Search Library Catalog by ISBN or Other Number - University of Texas at Austin Libraries</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" title="default" />
+<!--[if lte IE 6]>
+
+<link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" />
+
+<![endif]-->
+<link rel="search" type="application/opensearchdescription+xml" title="UT Libraries Catalog" href="http://www.lib.utexas.edu/gadgets/firefoxsearch/utfirefoxsearch.xml">
+</head>
+<body>
+<!--{toplogo}-->
+
+
+<table class="textFix">
+  
+  <tr><td colspan="2" valign="top">
+<h1>Search by ISBN or Other number </h1>
+<p>Type a <strong>number</strong>, then press the Enter key or click Go.</p>
+<form method="get" class="unpadded" action="i">
+<strong>ISBN/ISSN/Music Publisher Number/Library of Congress Control Number:</strong><br />
+<!--{search}-->
+<br/>
+	<label for="searchscope" style="display:none">Search in</label>
+<!--{scope}-->
+	<label for="sortdropdown" style="display:none">Sort by</label>
+<!--{indexsort}-->
+<input name="search" type="image" src="/screens/submit.gif" border="0">
+<!--{--submit}-->
+</form>
+<br />
+<strong><label for="searcharg">OCLC Number</label>:</strong>
+<form method="get" class="unpadded" action="0">
+<input type="hidden" name="searchtype" value="o" />
+<input type="text" name="searcharg" size="48"  value="" />
+<br />
+	<label for="searchscope" style="display:none">Search in</label>
+<!--{scope}-->
+	<label for="sortdropdown" style="display:none">Sort by</label>
+<!--{indexsort}-->
+<input name="search" type="image" src="/screens/submit.gif" border="0">
+<!--{--submit}-->
+</form>
+
+</td>
+</tr>
+</table>
+
+<br /><br />
+
+<div class="mainNavLinksWrapper">    
+  <div id="searchTipsLink"><div class="teal">
+    <div align="left">Search Tips:</div>
+  </div></div>
+  <div class="teal_line">&nbsp;</div>
+<p>Type the ISBN or other number as it appears. Punctuation and spaces can be omitted.<br />
+Examples: </p> 
+<ul class="unpadded">
+<li> ISBN: 006073132X
+<li> ISBN: 9789004149830
+<li> ISSN: 0303-7207
+<li> Music Publisher Number: ETC 1022
+<li> LCCN: 86001782
+<li> OCLC number: 47831356
+</ul>
+</div></div>
+
+<div style="clear:both"></div>
+<!--{botlogo}-->
+</body>
+</html>

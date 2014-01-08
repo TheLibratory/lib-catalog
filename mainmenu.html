@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- Updated: 09 June 2010 -->
+<!-- mainmenu -->
+<head>
+<title>Library Catalog - University of Texas at Austin</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<!--<link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > Un-comment to offer a larger logo on mainmenu.-->
+</head>
+<body>
+
+<!--{toplogo}-->
+
+<div class="pageContentInner">
+
+<h1 class="pageHeader">Keyword Search</h1>
+
+
+<div id="accessibleForm" class="form1Part">
+
+<div class="browseSearchtool">
+
+<form action="/search/" method="get" name="search" id="search">
+
+
+<input type="hidden" id="iiiFormHandle_1">
+
+
+<fieldset>
+<legend>Type one or more <strong>keywords</strong>, then press the Enter key or click Go.</legend>
+<div class="formEntryArea">
+<input type="hidden" name="searchtype" id="searchtype" value="X">
+<!--
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected">Keyword</option>
+<option value="t">Title</option>
+<option value="s">Journal Title</option>
+<option value="a">Author</option>
+<option value="d">Subject</option>
+<option value="y">Resource Name</option>
+</select>
+-->
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input maxlength="75" name="searcharg" id="searcharg" size="70" ><br />
+<label for="searchscope" class="accessibleAddInfo">Location</label>
+<!--{scope}-->
+<span class="nowrap formButtonArea">
+
+   <!--{submit}-->
+
+<script language="javascript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Go</span></span></div></div></a>
+
+<input type="submit" style="display:none">
+
+</span>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
+</form>
+</div><!-- browseSearchtool -->
+
+<div class="formTips">
+<table class="tipsTable">
+<caption>Search Tips</caption>
+
+<tr><td colspan="2">
+<p>Type keywords or truncated words.</p>
+For example:
+<br /> 
+<ul>
+<li>introduction statistics</li>
+<li>catcher rye</li>
+<li>wom?n health insur*</li>
+<li>"data mining"
+</ul>
+
+</td></tr>
+
+</table>
+
+<div align="left"><a href="http://wiki.lib.utexas.edu/hdi/pmwiki.php?action=search&q=Find+Articles">Looking for an Article?</a></div>
+
+</div>
+</div><!-- form1Part -->
+
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>

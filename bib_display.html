@@ -1,0 +1,383 @@
+<!--{toplogo}-->
+<!--{ifbibdisplay}-->
+<!--{xif}-->
+<!--{catedit}-->
+
+<div id="bibDisplayBody">
+<div class="navigationRowRecord">
+<!--{navrow}-->
+</div>
+<div id="bibDisplayContent">
+<div class="bibSearch">
+<!--{searchtool}-->
+<div class="bibSearchHistory">
+<!--{searchhistory}-->
+</div>
+</div><!-- bibSearch -->
+
+<div class="bibPager">
+<!--{pager}-->
+</div>
+
+<div class="bibClear"></div>
+
+<div class="bibResourceSidebar">
+<center>
+<!--{ifhasresourcetable}-->
+<!--{resourcetable}-->
+<!--{xif}-->
+<!--Optional INNReach resources.-->
+<!--{innreach}-->
+<!--{relsearch}-->
+<!--{bibimage}-->
+
+<div class="get_a_scan" id="get_a_scan"></div>
+
+<div class="google_image" id="google_image"></div>
+
+<br />
+<div id="endowment"></div>
+<br />
+<div class="extratoggle" id="extratoggle">
+<a class="myButton" id="displayTextSMS" href="javascript:toggleSMS();">+ Send via Text Message</a><br />
+<a class="myButton" id="displayTextG" href="javascript:toggleG();">- View via GoogleBooks</a><br  />
+<a class="myButton" id="displayTextLT" href="javascript:toggleLT();">- Recommended Books &amp; Tags</a>
+</div>
+<br />
+<br />
+
+<!--{recordlink}-->
+<br />
+
+</center>
+</div>
+
+<div class="bibDisplayJacket">
+<div class="bibMedia">
+<!--{media}-->
+</div>
+</div>
+
+<div class="bibDisplayContentMain">
+
+<!--{recordinfo:a}-->
+
+<h1 class="bibDisplayTitle">
+<!--{recordinfo:t}-->
+</h1>
+
+<!--{recordinfo:ukep}-->
+
+<!--{ifhaspatrate}-->
+<div class="bibDisplayRatings">
+<!--{ratings}-->
+</div>
+<!--{xif}-->
+
+<!--{booking}-->
+<!--{holdingslink}-->
+<div class="testlinkeddocs">
+<!--{linkeddocs}-->
+</div>
+<div class="bibDisplayUrls">
+<!--{URLS}-->
+</div>
+
+<!--{bloblinks}-->
+<!--{imagelinks}-->
+<!--{artthumb}-->
+<!--{xmlframe}-->
+<!--{ifTOC}-->
+<!--{TOC}-->
+<!--{xif}-->
+<!--{holds}-->
+<!--{holdings}-->
+
+<div class="bibDisplayItems">
+<div class="bibDisplayItemsMain">
+<!--{items}-->
+</div>
+</div>
+
+<div class="smscontent" id="smscontent">
+</div>
+
+<!--{orders}-->
+
+<div class="bibDisplayContentMore">
+<!--{recordinfo:rnsdbwxzio}-->
+</div>
+
+<div class="bibDisplayPermLink actionButtonArea">
+<!--{|recordlink|}-->
+</div>
+
+<div id="viewerCanvas" style="width: 100%; height: 500px; padding-top: 15px; padding-bottom:40px; border-top:1px dashed #767C70;"></div>
+
+
+<div class="ltfl_widgets" id="ltfl_widgets">
+<p align="right" style="font-size:.8em"><strong>Recommended Books &amp; Tags from <a href="http://www.librarything.com" target="_new">LibraryThing.com</a></strong></p>
+<div id="ltfl_related" class="ltfl"></div>
+<div id="ltfl_similars" class="ltfl"></div>
+<div id="ltfl_tagbrowse" class="ltfl"></div>
+</div>
+
+</div>
+
+</div><!-- close bibDisplayContent -->
+
+<div class="clear"></div>
+</div><!-- close bibDisplayBody -->
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="/screens/bib_display-extras.js"></SCRIPT>
+
+<script src="http://www.librarything.com/forlibraries/widget.js?id=144-1081496055" type="text/javascript"></script><noscript>This page contains enriched content visible when JavaScript is enabled or by clicking <a href="http://www.librarything.com/forlibraries/noscript.php?id=144-1081496055&accessibility=1">here</a>.</noscript>
+
+
+<!-- // =========== Google Books ===========  -->
+ 
+<script>
+        // Configure these lines for your page
+        // Put in all the ISBNS and identifiers you know of to ensure a match
+		cap_oclc = "OCLC:" + oclc_stripped;
+        var keys = [cap_oclc];
+        var cburl = "http://books.google.com/books";
+    
+        // Retrieve the info for these bibkeys           
+        var api_url = cburl + "?jscmd=viewapi&bibkeys=" + cap_oclc;
+        document.write(unescape("%3Cscript src=" + api_url +
+          " type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script>
+        var buttonImg =
+          'http://code.google.com/apis/books/images/gbs_preview_button1.gif';
+        for (isbn in _GBSBookInfo) {
+          var b = _GBSBookInfo[isbn];
+          if (b && (b.preview == "full" || b.preview == "partial")) {
+if (b.preview == "full") {
+document.getElementById("google_image").innerHTML ="<a target=\"_new\" href=\"" + b.preview_url + "\"><img src=\"" + buttonImg+ "\" alt=\"Full Text at Google\" title=\"Full Text at Google\" border=\"0\"></a><br />Full";
+}
+
+if (b.preview == "partial") {
+document.getElementById("google_image").innerHTML ="<a target=\"_new\" href=\"" + b.preview_url + "\"><img src=\"" + buttonImg+ "\" alt=\"Limited Preview at Google\" title=\"Limited Preview at Google\" border=\"0\"></a><br />Limited";
+}            break;
+          }
+        }
+</script> 
+
+
+
+
+<!-- ===========  End Google Books =========== -->
+
+<!-- ===========  SMS / QR Code  =========== -->
+
+<script type="text/javascript">
+
+var Url = {
+
+	// public method for url encoding
+	encode : function (string) {
+		return escape(this._utf8_encode(string));
+	},
+
+	// public method for url decoding
+	decode : function (string) {
+		return this._utf8_decode(unescape(string));
+	},
+
+	// private method for UTF-8 encoding
+	_utf8_encode : function (string) {
+		string = string.replace(/\r\n/g,"\n");
+		var utftext = "";
+
+		for (var n = 0; n < string.length; n++) {
+
+			var c = string.charCodeAt(n);
+
+			if (c < 128) {
+				utftext += String.fromCharCode(c);
+			}
+			else if((c > 127) && (c < 2048)) {
+				utftext += String.fromCharCode((c >> 6) | 192);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+			else {
+				utftext += String.fromCharCode((c >> 12) | 224);
+				utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+
+		}
+
+		return utftext;
+	},
+
+	// private method for UTF-8 decoding
+	_utf8_decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+
+		while ( i < utftext.length ) {
+
+			c = utftext.charCodeAt(i);
+
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			}
+			else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			}
+			else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+
+		}
+
+		return string;
+	}
+
+}
+
+function trim(s) {
+       return s.replace(/^\s*/, "").replace(/\s*$/, "");
+}
+
+var phpprocessor ='http://www.lib.utexas.edu/amazon_check/smsprocess.php';
+var title = "";
+title = book_title;
+
+/* Find the URL of this page. Still need to get this working...*/
+
+var rn = document.getElementById("bibRecordLink").href;
+
+
+/* var rn = "http://catalog.lib.utexas.edu:2082/record=b6519889~S29"; */
+
+
+/* This script is modified from a script shared by Garey Mills at the University of California Berkley Library  */
+/* which in turn includes work that is modified from one created by A. Brin at Bryn Mawr College */
+/* http://trilogy.brynmawr.edu/trico/sys/sms.html */
+
+/* I already have author and title in variables from bib_display-extras.js*/
+
+
+// Loading the 'out' variable with all the html and then put it into the sms div and since I want to display the qr_code
+// differently I've split out an additional qr_out variable for that.
+
+//var qrcode = "http://chart.apis.google.com/chart?chs=200x200&cht=qr&chld=L|0&chl="+title.substring(0,30)+"::";
+var qrcode = "http://chart.apis.google.com/chart?chs=120x120&cht=qr&chld=L|0&chl=";
+var qrcodeContent = title.substring(0,20)+"::";
+qrcodeContent += author;
+var out = '<div id="sms">';
+out += '<form action="'+phpprocessor+'" method="post">';
+out += '<input type="hidden"  name="returnURL" value=' + rn + '>';
+//out += "<fieldset><legend><span style=\"display: block; white-space: normal;\">Text/SMS Book Information</style></legend>";
+//out += "<p><strong>Select location to text:</strong></p><ol>";
+out += "<fieldset>";
+out += "<strong>Text/SMS Book Information";
+out += "<p>Select location to text:</p></strong><ol>";
+
+ var itms = document.getElementById('bib_items');	 // get the ITEM table
+ if (!itms) {
+	disableSMS(); 
+ };
+ var tr = itms.getElementsByTagName('TR');	// get each row
+  for(i = 1; i < tr.length; i++) {
+    var x=tr[i].getElementsByTagName('TD');	// get each cell
+    if (x.length >= 3) {			// if there's only 6 cells (like our ITEM table)
+      var loc = trim(x[0].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,""));		// get the location (remove tags)
+      var call = trim(x[1].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,""));	// get the call (remove tags)
+      var status = trim(x[2].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,""));	// get the status (remove tags)
+      var qualified_status = "";
+
+      var has_qualified_status = false;
+      if(qualified_status !== "") { has_qualified_status = true; }
+
+       //If we're on the first row, check it
+        var chck = "";
+        if (i === 1) { chck = ' checked '; }
+
+        // append the input
+        if (i <= 10) {
+            out += '<li><input ' + chck + ' type="radio" name="message" value="' + call + ':' + loc + ':' + status;
+            if(has_qualified_status) { out += ' (' + qualified_status + ')'; }
+             out += '\">' + call + ' ' + loc + ': ' + status;
+             if(has_qualified_status) { out += ' (' + qualified_status + ')'; }
+             out += '</li>';
+             qrcodeContent += ' ::' + call + ' ' + loc + ':' + status;
+             if(has_qualified_status) { qrcodeContent += ' (' + qualified_status + ')'; }
+        }
+        if (debug > 0) alert('found item: ' + loc + '|' + call );
+     }
+}
+
+qrcodeContent = Url.encode(qrcodeContent);
+qrcode = qrcode + qrcodeContent;
+
+out += '<input type="hidden" name="callnumber" value="'+call+'" /></ol>';
+out += "<p><label for=\"c\">Cell provider: </label>";
+out += "<select name=\"c\" id=\"c\">";
+out += "<option value=\"0\">Select provider</option>";
+out += "<option value=\"1\">Alltel</option>";
+out += "<option value=\"2\">AT&amp;T</option>";
+out += "<option value=\"3\">Boost</option>";
+out +="<option value=\"10\">Cingular</option>";
+out +="<option value=\"11\">MetroPCS</option>";
+out += "<option value=\"4\">Nextel</option>";
+out += "<option value=\"5\">Sprint</option>";
+out += "<option value=\"6\">T-Mobile</option>";
+out += "<option value=\"7\">US Cellular</option>";
+out += "<option value=\"8\">Verizon</option>";
+out += "<option value=\"9\">Virgin</option></select></p>";
+out += "<p><label for=\"n\">Your 10 digit number: </label>";
+out += "<input type=\"text\" name=\"n\" id=\"n\" value=\"\" />";
+out += "<input type=\"hidden\" name=\"title\" value=\""+title.substring(0,20)+"\" />";
+out += "<input type=\"hidden\" name=\"author\" value=\""+author.substring(0,20)+"\" />";
+out += "<input type=\"submit\" value=\"Send\" /><br />(example: 5101234567)</p>";
+out += "</ol><p><strong>Note:</strong>Provider charges may apply. SMS must be enabled.</p>";
+
+// close the list and add note
+// we use the innerHTML property to actually set the HTML into the page
+//   var sms_record = out;
+
+out +="</fieldset></form>";
+
+out += "</div>";
+
+var qrout = "<div class=\"faux-fieldset\">";
+qrout += "<div><img src=\""+qrcode+"\" title=\"QR Code\" /><br />";
+qrout += '<div style="width: 100%;"><a href="http://wiki.lib.utexas.edu/hdi/pmwiki.php/Main/UseQRCodes">about QR Codes</a></div></div>';
+qrout += "</div>";
+
+   var sms_home = document.getElementById("smscontent");
+   sms_home.innerHTML = out;
+
+   var qr_home = document.getElementById("qr_code");
+   qr_home.innerHTML = qrout;
+
+
+</script>
+<noscript><div style="width: 28%;float:left">Enable JavaScript to text book information to your cell phone.</div></noscript>
+
+
+<!-- ===========  End QR Code  =========== -->
+
+
+<div class="bibPager">
+<!--{pager}-->
+</div>
+
+
+<!--{botlogo}-->

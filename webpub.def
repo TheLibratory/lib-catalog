@@ -1,0 +1,288 @@
+#
+#Entry Syntax:
+#1 Record type in which field to display exists (required)
+#2 Field group tag of field to display (required)
+#3 Marc Tag and/or indicators (optional)
+#4 Subfields (optional)
+#5 Display Label (required)
+#6 Column % (optional)
+#7 Rec type in which to display this field (valid rec types b,c,i only)
+#
+#For complete info, see UM page #105418
+#Fields from Bibliographic record to display on bib record
+#
+b|a|100..|-64|Author||b
+b|a|110..|-64|Corporate author||b
+b|a|111..|-6|Conference||b
+b|t|130..|-6|Uniform title||b
+b|t|240..|-6h|Uniform title||b 
+b|t|245..|-6|Title||b
+
+b|e|250..|-6|Edition||b
+b|r|254..|a|Score Format||b
+b|r|255..||Map Scale||b   
+#b|n|255..|a|Map Scale||b
+#b|p|255..|a|Map Scale||b
+b|p|260b.|-6|Publication Information||b
+b|p|2602.|-6|Subsequent Publisher||b
+b|p|2603.|-6|Current Publisher||b
+b|p|263..|-6||
+b|p|264..|-6|Publication Information||b
+b|p|269..|-6|Publication Information||b
+b|p|270..||Address||b 
+b|b|7001.|-i64|Added author||b
+b|b|710[12].|-i64|Added author||b
+b|b|7201.|-64|Added author||b
+#The following line must exist in the file:
+b|H|||||b
+b|D|||Date of Publication|b
+b|r|300..|-6|Description||b
+b|r|306..|-6|||b
+b|r|307..|-6|Hours||b
+b|r|310..|-6|Frequency||b
+b|r|321..|-6|Previous Frequency||b
+b|r|362..|-6|Publication coverage date||b
+b|r|336||||b
+b|r|337||||b
+b|r|338||||b
+b|r|340||||b
+#b|s|.....|-x6|Series||b
+b|s|4900.|-6|Series||b
+b|s|4901.|-6|||b
+b|s|800..|-6|Series||b
+b|s|810..|-6|Series||b
+b|s|830.0|-6|Series||b
+b|n|505..|-6|Contents||b
+b|n|500..|-6|Note||b
+b|n|501..|-6|With:||b
+b|n|502..|-6|Thesis||b
+b|n|504..|-6|Bibliography||b
+b|n|505..|-6|Contents||b
+b|n|506..|-6|Access||b
+b|n|508..|-6|Credits||b
+b|n|510..|-6|Indexed in:||b
+b|n|5110.|-6|Performers||b
+b|n|5111.|-6|Cast||b
+b|n|515..|-6|Numbering peculiarity
+b|n|516..|-6|File type||b
+b|n|518..|aod-6|Recording Information||b
+b|n|520..|-6|Summary||b
+b|n|521..|-6|Audience||b
+b|n|524..|-6|Cite as:||b
+b|n|525..|-6|Supplement note:||b
+b|n|530..|-6|Additional forms||b
+b|n|533..|-6|Reproduction||b
+b|n|538..|-6|System details||b
+b|n|539..||||b
+b|n|540..|-6|Copyright info||b
+b|n|541..|-6|||b
+b|n|542..||||b
+b|n|544..|-6|Collection info||b
+b|n|545|-6|Special info||b
+b|n|546..|-6|Special info||b
+b|n|550..|-6|Issued by:||b
+b|n|555..|-6|Indexes||b
+b|n|561..|-6|Provenance||b
+b|n|580..|-6|Linking note||b
+b|n|583..||||b
+b|n|586..|-6|Awards||b
+b|n|590bb|-6|Local note||b
+b|n|5901.|-6|Donor note||b
+b|n|600[0123]0|-462|Subject||b
+b|d|600[0123]0|-462|Subject||b
+b|d|600[012]7|-ax462|||b
+b|n|610[12]0|-462|Subject||b
+b|d|610[12]0|-462|Subject||b
+b|d|610[12]7|-ax462|||b
+b|d|611[12]0|-62|Subject||b
+b|d|611[12]7|-ax462|||b
+b|d|630[123]0|-462|Subject||b
+b|d|630.7|-ax462|||b
+b|n|650.0|-462|Subject||b
+b|d|650.7|-ax4682|||
+b|n|650.7|-ax4682|||
+b|d|650.0|-462|Subject||b
+b|d|651.0|-462|Subject||b
+b|d|651.7|-azx4682|||b
+#b|d|6[0135][013].[01]|-6|Subject||b
+#b|j|6[015].[ 2]|-6|MeSH Subject||b
+b|d|600.2|-46|MeSH Subject||b
+b|d|610.2|-6|MeSH Subject||b
+b|d|650.2|-6|MeSH Subject||b
+b|d|650.6|-abxvyz6|||b
+b|d|651.6|-abxvyz6|||b
+b|d|651.2|-6|MeSH Subject||b
+b|d|651.4|-6||b
+b|d|650.4|-6||b
+#b|d|6[01]|-6|Subject||b
+b|d|630[0][0]|-6|Subject||b
+b|d|648||-avxyz2368||Subject||b
+b|d|654||-abcevyz23468||Subject||b
+b|d|656||-akvxyz2368||Subject||b
+b|d|653|-abcdx268|Subject||b
+b|d|655..|-26|Genre||b
+b|d|656..||||b
+b|d|657..|||Curriculum Term||b
+b|d|658||-268|Curriculum Term||b
+b|d|662||-2468|Subject Place term||b
+b|d|690..||Department||b
+
+b|u|210..||Key title||b
+b|u|222..|-6|Journal title||b
+b|u|246[0-3].|-56|Added title||b
+
+b|u|24612|-56|Distinct title||b
+b|u|24613|-56|Other title||b
+b|u|24614|-56|Cover title||b
+b|u|24615|-56|Added title page title||b
+b|u|24616|-56|Caption title||b
+b|u|24617|-56|Running title||b
+b|u|24618|-56|Spine title||b
+b|u|247..|-f6|Added title||b
+b|u|700..|-i6|Added entry||b
+b|b|700..|-i6|Added entry||b
+b|u|710..|-i6|Added entry||b
+b|b|710..|-i6|Added author||b
+b|u|720..|-i6|Supervisor||b
+b|t|730..|-i6|Added title||b 
+b|u|730..|-i65|Added title||b
+b|u|740..|-i6|Added title||b
+b|b|720|-68e|Supervisor||b
+b|x|780.0|-uwxyz6|Continues:||b
+b|x|780.1|-uwxyz6|Continues in part:||b
+b|x|780.2|-uwxyz6|Continues:||b
+b|x|780.3|-uwxyz6|Continues in part:||b
+b|x|780.4|-uwxyz6|Formed by:||b
+b|x|780.5|-uwxyz6|Absorbed:||b
+b|x|780.6|-uwxyz6|Absorbed in part by:||b
+b|x|780.7|-uwxyz6|Separated from:||b
+b|z|785.0|-uwxyz6|Continued by:||b
+b|z|785.1|-uwxyz6|Continued in part:||b
+b|z|785.2|-uwxyz6|Continued by:||b
+b|z|785.3|-uwxyz6|Continued in part by:||b
+b|z|785.4|-uwxyz6|Absorbed by:||b
+b|z|785.5|-uwxyz6|Absorbed in part by:||b
+b|z|785.6|-uwxyz6|Split into:||b
+b|z|785.7|-uwxyz6|Merged title with:   To form:||b
+b|z|785.8|-uwxyz6|Changed back to:||b
+b|w|760..|-67|Subseries of:||b
+b|w|762..|-67|Has subseries:||b
+b|w|765..|-67|Translation of:||b
+b|w|767..|-67|Translation as:||b
+b|w|770..|-67xgw|Has supplement:||b
+b|w|772..|-67xgw|Supplement to:||b
+b|w|773..|-n6g7xw|In:||b
+b|w|774..|-67xgw|Consitutent unit:||b
+b|w|775..|-67xgw|Other edition available:||b
+b|w|776..|-67xgw|||b
+b|w|777..|-67xgw|Issued with:||b
+b|w|786..|-67xw|Data source:||b
+b|w|787..|-67xw|Related to:||b
+b|b|790..||Special collection:||b
+b|b|791..||Special collection:||b 
+#b|m|857..||Digitization note:||b
+b|o|001..||OCLC number||b
+b|o|019|-az|Merged OCLC number||b
+b|o|035|-az|OCLC number||
+b|o|045||||
+b|o|052|||
+b|i|020..|-c|ISBN||b
+b|i|022..|-y2|ISSN||b
+b|i|0242.||ISMN||b
+b|i|024..||||b
+b|i|02800||||b
+b|i|02801||Music issue number||b
+b|i|02802||Music issue number||b
+b|i|02803||||b
+b|i|02810||||b
+b|i|02811||Music matrix number||b
+b|i|02812||Music matrix number||b
+b|i|02813||||b
+b|i|02820||||b
+b|i|02821||Plate number||b
+b|i|02822||Plate number||b
+b|i|02823||||b
+b|i|02830||||b
+b|i|02831||Music Publisher number||b 
+b|i|02832||Music Publisher number||b
+b|i|02833||||b
+b|i|02840||||b
+b|i|02841||Videorecording number||b
+b|i|02842||videorecording number||b
+b|i|02843||||b
+b|i|02850||||b
+b|i|02851||Other Music publisher number||b
+b|i|02852||Other Music publisher number||b
+b|i|02853||||b
+b|i|030..||CODEN||b
+#b|l|099..||Call#||b
+b|g|0860.||Gov't document number||b  
+b|k|970.1|&|Table of Contents||b  
+#b|m|857||Digitalization note||b
+
+#
+#Holdings record fields to display on bib record
+
+c|$|||||b|
+
+c|c|852|hi |Call no.||b
+#c|i|843|||
+c|Q||||b|
+c|3|||Latest Received|b|
+i|%|||Current Status|35|c
+
+c|2||||b|&nbsp;
+
+c|h|...||Library Bound Vols.:||b
+
+ 
+
+
+
+#Item record fields to display on bib record
+i|1|||Location||b
+i|C|.....||Call number||b|&nbsp;
+i|v||||o|b|&nbsp;
+
+
+#i|v|.....||||b
+i|#|...|||20|b 
+i|%|.....||Current Status  
+#i|!||||b|
+#i|#|...||Copy|10|b
+B|%|||Status||b 
+#i|n|||Item Note||b 
+#Resource record fields to display on bib record  
+e|a|||Author||b
+e|t|||Resource Name||b
+e|k|||Advisory||b
+e|e|||Resource Description||b
+e|h|||Coverage||b
+e|b|||Format||b
+e|g|||User Support||b
+e|f|||Note||b
+ 
+
+e|d|||Subject||b
+#
+#Holdings record display on holding record screen
+#This record display is invoked when clicking the "view items"
+#link from a monographic holdings record
+#
+#Bib rec fields to display on holdings rec screen:
+b|a|100..||Author||c
+b|t|245..||Title||c
+b|p|260..||Imprint||c
+i|$|...||Location|30|c
+c|H|||||c
+#The Following Line must appear in the file:
+
+#Holdings rec fields to display on holdings rec screen
+i|C|...||Call#||c
+c|n|||Note||c
+
+#Item rec fields to display on holdings rec screen
+i|$|...||Location|30|c
+i|C|...||Call#||c
+i|%|| |Status|25|c
+

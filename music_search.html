@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
+<head>
+<title>Music Search - Millennium Web Catalog</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
+
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+</head>
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<h1 class="pageHeader">Music Search </h1>
+
+<div id="accessibleForm" class="form1Part">
+
+<div class="formabove">
+
+
+    <p>Type one or more <strong>keywords</strong> (eg: composer name, work title, song title, publisher name, performer or group name), select limits by checking or unchecking boxes as needed, and click Go.  Use your browser's back button to return to this search screen to revise your search.
+      </p>
+
+<form method="get" action="/search/X">
+
+<label for="SEARCH" class="accessibleAddInfo">Search term</label>
+<!--{search}-->
+
+<!--{submit}-->
+
+<p><strong>Search limits:</strong></p>
+
+<table border="0" width="80%" cellpadding="5px">
+
+<tr><td valign="top" nowrap="nowrap">
+Score:</td>
+<td nowrap="nowrap"> 
+<input type="checkbox" name="m" title="Score" value="c" checked/>
+</select> 
+</td> 
+<td rowspan ="3">
+<!--
+<div style=" border:solid; padding:10px; width:150px">
+To select more than one item from these menus, hold down the Ctrl key (Mac: Apple key).<br />[<a href="/screens/help_index.html#mattype">material type help</a>]
+</div>
+-->
+</td>
+</tr>
+
+
+
+<tr><td valign="top" nowrap="nowrap">
+Sound Recording Type:<br /></td>
+<td valign="top" nowrap="nowrap"> 
+<input type="checkbox" name="m" title="Sound Recording Type" value="h" checked /> Compact Discs<br />
+<input type="checkbox" name="m" title="Sound Recording Type" value="1" /> Records (LPs)<br />
+<input type="checkbox" name="m" title="Sound Recording Type" value="3" /> Audio Cassettes<br /> 
+<input type="checkbox" name="m" title="Sound Recording Type" value="i" /> Non-Music Recordings<br /> 
+<input type="checkbox" name="m" title="Sound Recording Type" value="j" /> Other Recording Formats<br />
+</td> 
+</tr>
+
+<tr><td valign="top" nowrap="nowrap">
+Video Recording Type:</td>
+<td> 
+<input type="checkbox" name="m" title="Video Recording" Typevalue="l" /> DVDs<br />
+<input type="checkbox" name="m" title="Video Recording" Typevalue="2" /> Videocassettes<br />
+</td> 
+</tr>
+
+<tr><td valign="top" nowrap="nowrap">
+<label for="availlim">Available items Only</label>:<br />(optional)</td>
+<td>
+<input type="checkbox" name="availlim" id="availlim" value="1" /> 
+</td>
+</tr>
+<tr><td valign="top" nowrap="nowrap">
+<label for="searchscope">Location</label>:<br />(optional)</td>
+<td> 
+<select name="searchscope" id="searchscope" >
+<option value="16"> Fine Arts Library</option> 
+<!--<option value="8"> Audio Visual Library</option> -->
+<option value="10"> Benson Latin American Collection</option> 
+<option value="18"> Harry Ransom Center</option> 
+<option value="11"> Center for American History</option> 
+
+<option value="29" selected="selected"> ALL Locations</option>
+</select>
+</td>
+</tr>
+
+<tr><td valign="top" nowrap="nowrap">
+
+<label for="l">Language</label>:<br />(optional) </td>
+<td>
+<select name="l" id="l" size="5" multiple="multiple">
+<option value="">ANY</option>
+<option value="-">---</option> 
+<option value="ara">Arabic</option>
+<option value="chi">Chinese</option>
+<option value="eng">English</option>
+<option value="fre">French</option>
+<option value="ger">German</option>
+<option value="hin">Hindi</option>
+<option value="ita">Italian</option>
+<option value="jpn">Japanese</option>
+<option value="lat">Latin</option>
+<option value="por">Portuguese</option>
+<option value="rus">Russian</option>
+<option value="spa">Spanish</option>
+<option value="">---------</option>
+<option value="afr">Afrikaans</option>
+<option value="arm">Armenian</option>
+<option value="asm">Assamese</option>
+<option value="aze">Azerbaijani</option>
+<option value="ben">Bengali</option>
+<option value="bho">Bhojpuri</option>
+<option value="bra">Braj</option>
+<option value="bul">Bulgarian</option>
+<option value="bel">Byelorussian</option>
+<option value="cat">Catalan</option>
+<option value="chu">Church Slavic</option>
+<option value="crp">Creoles/Pidgins</option>
+<option value="cze">Czech</option>
+<option value="dan">Danish</option>
+<option value="doi">Dogri</option>
+<option value="dut">Dutch</option>
+<option value="egy">Egyptian</option>
+<option value="enm">English, Middle</option>
+<option value="ang">English, Old</option>
+<option value="fin">Finnish</option>
+<option value="frm">French, Middle</option>
+<option value="fro">French, Old</option>
+<option value="glg">Galician</option>
+<option value="gmh">German, Middle High</option>
+<option value="grc">Greek, Ancient</option>
+<option value="gre">Greek, Modern</option>
+<option value="guj">Gujarati</option>
+<option value="heb">Hebrew</option>
+<option value="hun">Hungarian</option>
+<option value="ice">Icelandic</option>
+<option value="inc">Indic</option>
+<option value="ind">Indonesian</option>
+<option value="gle">Irish</option>
+<option value="kan">Kannada</option>
+<option value="kor">Korean</option>
+<option value="mai">Maithili</option>
+<option value="may">Malay</option>
+<option value="mal">Malayalam</option>
+<option value="mni">Manipuri</option>
+<option value="mar">Marathi</option>
+<option value="myn">Mayan</option>
+<option value="nep">Nepali</option>
+<option value="new">Newari</option>
+<option value="nor">Norwegian</option>
+<option value="ori">Oriya</option>
+<option value="pli">Pali</option>
+<option value="pan">Panjabi</option>
+<option value="per">Persian</option>
+<option value="pol">Polish</option>
+<option value="pra">Prakrit</option>
+<option value="pus">Pushto</option>
+<option value="que">Quechua</option>
+<option value="raj">Rajasthani</option>
+<option value="roa">Romance</option>
+<option value="rum">Romanian</option>
+<option value="san">Sanskrit</option>
+<option value="gla">Scottish Gaelic</option>
+<option value="scc">Serbo-Croatian Cyrillic</option>
+<option value="scr">Serbo-Croatian Roman</option>
+<option value="snd">Sindhi</option>
+<option value="sin">Sinhalese</option>
+<option value="slo">Slovak</option>
+<option value="slv">Slovenian</option>
+<option value="sai">South American Indian</option>
+<option value="swa">Swahili</option>
+<option value="swe">Swedish</option>
+<option value="tam">Tamil</option>
+<option value="tel">Telugu</option>
+<option value="tur">Turkish</option>
+<option value="ota">Turkish Ottoman</option>
+<option value="ukr">Ukranian</option>
+<option value="urd">Urdu</option>
+<option value="wel">Welsh</option>
+<option value="yid">Yiddish</option></select>
+</td>
+</tr>
+
+<tr><td colspan="2">
+<table border="0">
+<tr><td>Year:<br />(optional)</td><td><label for="Da">After</label><input type="text" size="10" name="Da" id="Da" value=""> and <label for="Db">Before</label> <input type="text" size="10" name="Db" id="Db" value="">
+</td></tr></table>
+</td></tr>
+</table>
+
+
+<!--{publish}-->
+
+</p>
+
+<p align="right">
+<input name="Clear Form" type="reset" value="Clear Form">
+</p>
+<p align="left">
+<!--{submit}-->
+</p>
+<!--{advancedsearchformend}-->
+
+<p>
+<dl>
+<dt><strong>Related Links:</strong></dt>
+<dd><a href="http://www.lib.utexas.edu/fal/hmrc/index.html" target="_new">Historical Music Recordings Collection</a></dd>
+<dd><a href="http://www.lib.utexas.edu/indexes/titles.html?id=533" target="_new">DRAM (Database of Recorded American Music)</a></dd>
+</dl>
+
+<div class="mainNavLinksWrapper">    
+  <div id="searchTipsLink"><div class="teal">
+    <div align="left">Search Tips:</div>
+  </div></div>
+  <div class="teal_line">&nbsp;</div>
+<p>Type keywords or truncated words.  Use the limiters or pull-down field searching menus to narrow search results.</p>
+<p align="center">
+<table border="1" cellspacing="0" cellpadding="0" width="90%">
+  <tr>
+    <td width="157" valign="top"><p><strong>&nbsp;</strong></p>
+        <p><strong>Word Order / Phrase Searching</strong><strong> </strong></p></td>
+    <td width="582" valign="top"><p>&nbsp;</p>
+        <p>Keywords are searched separately. To search words as a phrase, enclose them in quotation marks. </p>
+      <p><u>Examples:</u></p>
+      <p>"rite of spring"<br>
+        "John Philip Sousa"</p></td>
+  </tr>
+  <tr>
+    <td width="157" valign="top"><p><strong>&nbsp;</strong></p>
+        <p><strong>Truncation</strong></p></td>
+    <td width="582" valign="top"><p>&nbsp;</p>
+        <p>Use an asterisk to look for 1-5 characters after a word stem. Use a double asterisk to search for an    unlimited number of characters.</p>
+      <p>A question mark (?) can    be used to look for an unknown character within a word.<u> </u></p>
+      <p><u>Examples:</u></p>
+      <p>mus*<em> - </em>finds music, musical, musician, muse, museum, etc.<br>
+        mus** - finds musicians, musicality, etc.<br>
+        wom?n - finds women and woman</p></td>
+  </tr>
+  <tr>
+    <td width="157" valign="top"><p><strong>&nbsp;</strong></p>
+        <p><strong>Connectors / Boolean Searching</strong></p></td>
+    <td width="582" valign="top"><p>&nbsp;</p>
+        <p>Use <strong>AND</strong> to separate keywords when using multiple operators.</p>
+      <p>Use <strong>OR</strong> to broaden your search by looking for any of several    words.&nbsp; These words must be nested in    parentheses.</p>
+      <p>Use <strong>AND NOT</strong> to eliminate specific words from your search. </p>
+      <p><u>Examples:</u><br>
+        &nbsp;<br>
+        oboe AND (flute OR clarinet) AND NOT violin<u> </u>
+        </p></td>
+  </tr>
+  <tr>
+    <td width="157" valign="top"><p><strong>&nbsp;</strong></p>
+        <p><strong>Proximity Searching</strong></p></td>
+    <td width="582" valign="top"><p>&nbsp;</p>
+        <p>Use <strong>NEAR</strong> to search for words within 10 terms of each other, in any    order.</p>
+      <p>Use <strong>WITHIN # </strong>to search for words occurring within the entered number of words of each other, in any order.</p>
+      <p>Use <strong>BEFORE</strong> and <strong>AFTER</strong> to    search for words in a particular order<u> </u></p>
+      <p><u>Examples:</u></p>
+      <p>mass NEAR war<br>
+        missa WITHIN 3 bella<br>
+        rite BEFORE spring<u> </u></p></td>
+  </tr>
+</table>
+
+</p>
+<p>For more information see the <a href="/screens/help_index.html#tips">Help section on Keyword searching</a>.
+</p>
+</div>
+
+  </div>
+
+<div style="clear:both"></div>
+
+
+</div><!--form2Part -->
+</div><!-- pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>
