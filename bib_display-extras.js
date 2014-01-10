@@ -507,6 +507,14 @@ try {
 		}
 		var fund = "";
 
+		var fund = /Taiwan Resource Center for Chinese Studies/;
+		if (fund.test(donor_note_match)) {
+			donor_url = "http://www.lib.utexas.edu/collection/trccs";
+			donor_img_url = "http://www.lib.utexas.edu/sites/default/files/about/development/endowments/utl_trccs_bookplate_300.jpg";
+			fundmatch = 1;
+		}
+		var fund = "";
+
 		var fund = /The Harold W. Billings Staff Honors Endowment/;
 		if (fund.test(donor_note_match)) {
 			donor_url = "http://www.lib.utexas.edu/development/endowments/staffhonors.html";
